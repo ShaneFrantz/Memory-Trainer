@@ -1,46 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
 /* Background inspired by Chris Smith 
 https://www.sliderrevolution.com/resources/css-animated-background/ */
-html {
-    height:100%;
-}
 
 body {
-    margin:0;
+    margin: 0;
 }
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
     background-image:linear-gradient(-60deg, #ff6666 50%, #36d7ff 50%);
-    bottom:0;
-    left:-50%;
-    opacity:0.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
 }
 
 .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
 }
 
 .bg3 {
     animation-duration: 5s;
-}
-
-.content {
-    background-color: rgba(255, 255, 255, .8);
-    border-radius: .25em;
-    box-shadow:0 0 .25em rgba(0, 0, 0, .25);
-    box-sizing:border-box;
-    left:50%;
-    padding:5vmin;
-    position:fixed;
-    text-align:center;
-    top:20%;
-    transform:translate(-50%, -50%);
 }
 
 h1 {
@@ -48,9 +32,87 @@ h1 {
     font-size: 40px;
 }
 
+html {
+    height: 100%;
+}
+
+.menu-button {
+    border-radius: 50px;
+    background-color: #eb0303f1;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 28px;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    width: 200px;
+}
+  
+.menu-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.menu-button span:after {
+    content: '\00bb';
+    opacity: 0;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    transition: 0.5s;
+}
+  
+.menu-button:hover span {
+    padding-right: 25px;
+}
+  
+.menu-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.menu-bottom-panel {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    height: 50vh;
+    left: 50%;
+    padding: 5vmin;
+    position: fixed;
+    text-align: center;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+}
+
+
+.menu-top-panel {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 5vmin;
+    position: fixed;
+    text-align: center;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+span {
+    font-family: 'Jost', sans-serif;
+    font-size: 32px;
+}
+
 @keyframes slide {
     0% {
-        transform:translateX(-25%);
+        transform: translateX(-25%);
     }
     100% {
         transform: translateX(25%);
