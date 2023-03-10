@@ -29,6 +29,13 @@ body {
     margin: 0;
 }
 
+.game-background {
+    background-color: #fffdd0;
+    box-sizing: border-box;
+    border: 50px solid #ff6666;
+    overflow: hidden;
+}
+
 h1 {
     font-family: 'Jost', sans-serif;
     font-size: 40px;
