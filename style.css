@@ -26,14 +26,38 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 }
 
 body {
+    height: 100%;
     margin: 0;
+    padding: 0;
 }
 
 .game-background {
     background-color: #fffdd0;
     box-sizing: border-box;
     border: 50px solid #ff6666;
-    overflow: hidden;
+}
+
+.game-button {
+    background-color: #ff6666;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 64px;
+    height: 30vh;
+    margin: 4px 2px;
+    opacity: 0.8;
+    padding: 16px 32px;
+    text-align: center;
+    transition: 0.3s;
+    width: 30vw;
+}
+
+.game-button:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 h1 {
